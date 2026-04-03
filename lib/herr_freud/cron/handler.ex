@@ -109,8 +109,7 @@ defmodule HerrFreud.Cron.Handler do
     else
       {:error, reason} ->
         Logger.error("Failed to generate nudge: #{inspect(reason)}")
-      :ok ->
-        :ok
+        {:error, reason}
     end
   end
 

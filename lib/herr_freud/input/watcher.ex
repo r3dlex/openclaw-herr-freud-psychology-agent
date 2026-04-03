@@ -21,7 +21,7 @@ defmodule HerrFreud.Input.Watcher do
     # Ensure directory exists
     File.mkdir_p!(watch_dir)
 
-    {:ok, %{watch_dir: watch_dir, debounce_timers: %{}}, continue: :start_watching}
+    {:ok, %{watch_dir: watch_dir, debounce_timers: %{}}, {:continue, :start_watching}}
   end
 
   @impl true

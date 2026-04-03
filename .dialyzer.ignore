@@ -1,0 +1,3 @@
+# Dialyzer ignores for known external library warnings
+{unknown_function, {FileSystem, start_link, 1}}.
+{unknown_function, {FileSystem, subscribe, 1}}.

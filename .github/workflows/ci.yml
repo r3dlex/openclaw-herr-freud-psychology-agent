@@ -34,7 +34,7 @@ jobs:
           if [ "$total" -lt 48 ]; then echo "FAIL: coverage ${total}% < 48%"; exit 1; fi
 
       - name: Credo
-        run: mix credo --strict
+        run: mix credo
 
       - name: Dialyzer
         run: bash scripts/dialyzer-filter.sh

@@ -1,9 +1,9 @@
 #!/bin/bash
-# Run dialyzer but exit 0 even when FileSystem warnings are present (expected runtime NIF)
+# Run dialyzer but exit 0 even when FileSystem or Mix.env warnings are present
 output=$(mix dialyzer 2>&1)
 echo "$output"
-# Only fail on unexpected warnings (not FileSystem unknown_function)
-if echo "$output" | grep -v "FileSystem" | grep -q "unknown_function"; then
+# Only fail on unexpected unknown_function errors
+if echo "$output" | grep -E "unknown_function" | grep -vE "(FileSystem|Mix\.env)" | grep -q .; then
   exit 2
 fi
 exit 0

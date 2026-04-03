@@ -7,7 +7,7 @@ defmodule HerrFreud.Application do
   def start(_type, _args) do
     # In test environment, skip all external-service children to avoid failures
     children =
-      if Application.get_env(:herr_freud, :env) == :test or Mix.env() == :test do
+      if :test == Application.get_env(:herr_freud, :env, :prod) do
         [
           HerrFreud.Repo,
           {Task.Supervisor, name: HerrFreud.Session.TaskSupervisor},

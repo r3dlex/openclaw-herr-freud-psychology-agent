@@ -22,6 +22,11 @@ jobs:
       - name: Install dependencies
         run: mix deps.get
 
+      - name: Setup database
+        run: |
+          mix ecto.create
+          MIX_ENV=test mix ecto.migrate
+
       - name: Compile
         run: mix compile --warnings-as-errors
 

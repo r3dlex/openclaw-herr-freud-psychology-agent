@@ -1,3 +1,4 @@
+# Build output
 /_build
 /deps
 /.fetch
@@ -17,3 +18,7 @@ tmp/
 cover/
 .omc/
 Elixir.HerrFreud.*.coverdata
+prd.json
+*.crashdump
+*.dump
+.DS_Store

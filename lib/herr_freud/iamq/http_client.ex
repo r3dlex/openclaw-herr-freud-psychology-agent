@@ -157,6 +157,9 @@ defmodule HerrFreud.IAMQ.HttpClient do
         # Triggered programmatically — process the specified input
         Logger.info("Session request received")
 
+      "direct_message" ->
+        handle_direct_message(msg)
+
       "cron::daily_nudge_check" ->
         HerrFreud.Cron.Handler.run_daily_nudge_check()
 
@@ -170,6 +173,44 @@ defmodule HerrFreud.IAMQ.HttpClient do
     e ->
       Logger.error("Error handling inbox message: #{inspect(e)}")
   end
+
+  defp handle_direct_message(msg) do
+    sender = msg["from"] || msg["body"] && msg["body"]["from"] || "unknown"
+    patient_text = msg["body"] && msg["body"]["text"] || ""
+
+    if patient_text != "" do
+      system_prompt = HerrFreud.Identity.Prompt.build_chat_prompt()
+
+      messages = [
+        %{role: "system", content: system_prompt},
+        %{role: "user", content: patient_text}
+      ]
+
+      response_text = case llm_mod().chat(messages, temperature: 0.7, max_tokens: 1024) do
+        {:ok, text} -> text
+        {:error, _} -> "I'm sorry — I'm having trouble responding right now. Please try again in a moment."
+      end
+
+      send_direct_reply(sender, response_text)
+    end
+  end
+
+  defp send_direct_reply(to_agent, text) do
+    reply = %{
+      from: @agent_id,
+      to: to_agent,
+      type: "reply",
+      subject: "direct_reply",
+      body: %{
+        text: text,
+        timestamp: DateTime.utc_now() |> DateTime.to_iso8601()
+      }
+    }
+
+    do_send(reply, %{})
+  end
+
+  defp llm_mod, do: Application.get_env(:herr_freud, :llm_mod, HerrFreud.LLM.MiniMax)
 
   defp persist_to_file_fallback(message) do
     fallback_dir = Path.dirname(@queue_path || "/tmp/iamq_fallback.json")

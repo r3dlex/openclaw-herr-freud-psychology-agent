@@ -127,6 +127,9 @@ defmodule HerrFreud.IAMQ.WsClient do
       "session_request" ->
         Logger.info("Session request via WebSocket")
 
+      "direct_message" ->
+        handle_direct_message(msg)
+
       _ ->
         Logger.debug("WebSocket message: #{inspect(subject)}")
     end
@@ -134,4 +137,48 @@ defmodule HerrFreud.IAMQ.WsClient do
     e ->
       Logger.error("WS message error: #{inspect(e)}")
   end
+
+  defp handle_direct_message(msg) do
+    sender = msg["from"] || msg["body"] && msg["body"]["from"] || "unknown"
+    patient_text = msg["body"] && msg["body"]["text"] || ""
+
+    if patient_text != "" do
+      system_prompt = HerrFreud.Identity.Prompt.build_chat_prompt()
+
+      messages = [
+        %{role: "system", content: system_prompt},
+        %{role: "user", content: patient_text}
+      ]
+
+      case llm_mod().chat(messages, temperature: 0.7, max_tokens: 1024) do
+        {:ok, response} ->
+          send_direct_reply(sender, response)
+
+        {:error, reason} ->
+          Logger.error("Direct message LLM error: #{inspect(reason)}")
+          send_direct_reply(sender, "I'm sorry — I'm having trouble responding right now. Please try again in a moment.")
+      end
+    end
+  end
+
+  defp send_direct_reply(to_agent, text) do
+    reply = %{
+      from: @agent_id,
+      to: to_agent,
+      type: "reply",
+      subject: "direct_reply",
+      body: %{
+        text: text,
+        timestamp: DateTime.utc_now() |> DateTime.to_iso8601()
+      }
+    }
+
+    try do
+      send_frame(Jason.encode!(reply))
+    rescue
+      _ -> :ok
+    end
+  end
+
+  defp llm_mod, do: Application.get_env(:herr_freud, :llm_mod, HerrFreud.LLM.MiniMax)
 end

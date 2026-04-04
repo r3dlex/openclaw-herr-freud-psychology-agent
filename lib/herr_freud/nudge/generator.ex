@@ -12,13 +12,7 @@ defmodule HerrFreud.Nudge.Generator do
     messages = [
       %{
         role: "system",
-        content: """
-        You are Herr Freud, a gentle and warm therapeutic companion.
-        Write a brief, caring nudge message to encourage someone to share
-        what's on their mind. Be warm, curious, and unhurried.
-        Max 3-4 sentences. End with an open, inviting question.
-        Only output the nudge text, nothing else.
-        """
+        content: HerrFreud.Identity.Prompt.build_nudge_prompt()
       },
       %{role: "user", content: prompt}
     ]

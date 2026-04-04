@@ -1,14 +1,14 @@
-# Build stage
-FROM elixir:1.14-alpine AS builder
+FROM elixir:1.18-otp-27-alpine AS builder
 
 RUN apk add --no-cache build-base git
 
 WORKDIR /app
 
-RUN mix local.hex --force && mix local.rebar --force
-
-COPY mix.exs mix.lock ./
-RUN mix deps.get && mix deps.compile
+COPY mix.exs mix.lock* ./
+RUN mix local.hex --force && \
+    mix local.rebar --force && \
+    mix deps.get && \
+    mix deps.compile
 
 COPY lib/ ./lib/
 COPY config/ ./config/
@@ -16,17 +16,23 @@ COPY priv/ ./priv/
 
 RUN mix compile
 
-RUN mix release
+# --- Runtime ---
+FROM elixir:1.18-otp-27-alpine
 
-FROM alpine:3.18 AS releaser
-
-RUN apk add --no-cache openssl ncurses-libs libcrypto3 libncursesw6
-RUN apk add --no-cache python3 py3-pip
+RUN apk add --no-cache python3 bash tini
 
 WORKDIR /app
 
-COPY --from=builder /app/_build/release/herr_freud /app/herr_freud
+COPY --from=builder /app/_build /app/_build
+COPY --from=builder /app/deps /app/deps
+COPY --from=builder /app/mix.exs /app/
+COPY --from=builder /app/mix.lock /app/
+COPY --from=builder /app/config /app/config
+COPY --from=builder /app/lib /app/lib
+COPY --from=builder /app/priv /app/priv
+COPY --from=builder /root/.mix /root/.mix
 
 ENV TERM=xterm
 
-CMD ["/app/herr_freud/bin/herr_freud", "start"]
+ENTRYPOINT ["tini", "--"]
+CMD ["mix", "run", "--no-halt"]

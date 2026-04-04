@@ -8,6 +8,9 @@ services:
     env_file:
       - .env
     environment:
+      - IAMQ_HTTP_URL=${IAMQ_HTTP_URL:-http://host.docker.internal:18790}
+      - IAMQ_WS_URL=${IAMQ_WS_URL:-ws://host.docker.internal:18793/ws}
+      - IAMQ_AGENT_ID=${IAMQ_AGENT_ID:-herr_freud_agent}
       - EMBEDDINGS_URL=http://host.docker.internal:18795
     volumes:
       - ${HERR_FREUD_DATA_FOLDER:-./data}:/data

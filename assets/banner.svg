@@ -1,335 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" role="img" aria-label="Herr Freud Therapeutic Listener Banner">
-  <title>Herr Freud — Therapeutic Listener</title>
-  <desc>A wise, friendly crab wearing classical psychoanalytic attire sitting on a therapist's couch, representing the Herr Freud therapeutic AI agent.</desc>
-
-  <defs>
-    <!-- Background gradient -->
-    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1" gradientUnits="objectBoundingBox">
-      <stop offset="0%" stop-color="#0D2235"/>
-      <stop offset="100%" stop-color="#1E293B"/>
-    </linearGradient>
-
-    <!-- Couch gradient -->
-    <linearGradient id="couchGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#FFEDD5"/>
-      <stop offset="100%" stop-color="#FED7AA"/>
-    </linearGradient>
-
-    <!-- Couch back cushion gradient -->
-    <linearGradient id="cushionGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#FEF3C7"/>
-      <stop offset="100%" stop-color="#FDE68A"/>
-    </linearGradient>
-
-    <!-- Crab shell gradient -->
-    <linearGradient id="shellGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#F97316"/>
-      <stop offset="100%" stop-color="#C2410C"/>
-    </linearGradient>
-
-    <!-- Crab underside gradient -->
-    <linearGradient id="bellyGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#FB923C"/>
-      <stop offset="100%" stop-color="#EA580C"/>
-    </linearGradient>
-
-    <!-- Jacket gradient -->
-    <linearGradient id="jacketGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1E293B"/>
-      <stop offset="100%" stop-color="#0F172A"/>
-    </linearGradient>
-
-    <!-- Gold gradient for glasses -->
-    <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#FCD34D"/>
-      <stop offset="50%" stop-color="#D97706"/>
-      <stop offset="100%" stop-color="#B45309"/>
-    </linearGradient>
-
-    <!-- Teal glow -->
-    <radialGradient id="tealGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#0D9488" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#0D9488" stop-opacity="0"/>
-    </radialGradient>
-
-    <!-- Soft drop shadow filter -->
-    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
-      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.3"/>
-    </filter>
-
-    <!-- Subtle inner glow for the crab -->
-    <filter id="crabGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
-      <feFlood flood-color="#F97316" flood-opacity="0.3" result="color"/>
-      <feComposite in="color" in2="blur" operator="in" result="glow"/>
-      <feMerge>
-        <feMergeNode in="glow"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-  </defs>
-
-  <!-- ═══════════════════════════════════════════════════════ -->
-  <!-- BACKGROUND                                               -->
-  <!-- ═══════════════════════════════════════════════════════ -->
-
-  <rect width="800" height="300" fill="url(#bgGrad)" rx="16"/>
-
-  <!-- Subtle teal ambient glow behind the scene -->
-  <ellipse cx="400" cy="210" rx="280" ry="130" fill="url(#tealGlow)"/>
-
-  <!-- Subtle grid / dot pattern for depth -->
-  <g fill="#0D9488" opacity="0.07">
-    <circle cx="50"  cy="30"  r="1.5"/><circle cx="100" cy="30"  r="1.5"/><circle cx="150" cy="30"  r="1.5"/><circle cx="200" cy="30"  r="1.5"/><circle cx="250" cy="30"  r="1.5"/><circle cx="300" cy="30"  r="1.5"/><circle cx="350" cy="30"  r="1.5"/><circle cx="400" cy="30"  r="1.5"/><circle cx="450" cy="30"  r="1.5"/><circle cx="500" cy="30"  r="1.5"/><circle cx="550" cy="30"  r="1.5"/><circle cx="600" cy="30"  r="1.5"/><circle cx="650" cy="30"  r="1.5"/><circle cx="700" cy="30"  r="1.5"/><circle cx="750" cy="30"  r="1.5"/>
-    <circle cx="50"  cy="60"  r="1.5"/><circle cx="100" cy="60"  r="1.5"/><circle cx="150" cy="60"  r="1.5"/><circle cx="200" cy="60"  r="1.5"/><circle cx="250" cy="60"  r="1.5"/><circle cx="300" cy="60"  r="1.5"/><circle cx="350" cy="60"  r="1.5"/><circle cx="400" cy="60"  r="1.5"/><circle cx="450" cy="60"  r="1.5"/><circle cx="500" cy="60"  r="1.5"/><circle cx="550" cy="60"  r="1.5"/><circle cx="600" cy="60"  r="1.5"/><circle cx="650" cy="60"  r="1.5"/><circle cx="700" cy="60"  r="1.5"/><circle cx="750" cy="60"  r="1.5"/>
-    <circle cx="50"  cy="90"  r="1.5"/><circle cx="100" cy="90"  r="1.5"/><circle cx="150" cy="90"  r="1.5"/><circle cx="200" cy="90"  r="1.5"/><circle cx="250" cy="90"  r="1.5"/><circle cx="300" cy="90"  r="1.5"/><circle cx="350" cy="90"  r="1.5"/><circle cx="400" cy="90"  r="1.5"/><circle cx="450" cy="90"  r="1.5"/><circle cx="500" cy="90"  r="1.5"/><circle cx="550" cy="90"  r="1.5"/><circle cx="600" cy="90"  r="1.5"/><circle cx="650" cy="90"  r="1.5"/><circle cx="700" cy="90"  r="1.5"/><circle cx="750" cy="90"  r="1.5"/>
-    <circle cx="50"  cy="260" r="1.5"/><circle cx="100" cy="260" r="1.5"/><circle cx="150" cy="260" r="1.5"/><circle cx="200" cy="260" r="1.5"/><circle cx="250" cy="260" r="1.5"/><circle cx="300" cy="260" r="1.5"/><circle cx="350" cy="260" r="1.5"/><circle cx="400" cy="260" r="1.5"/><circle cx="450" cy="260" r="1.5"/><circle cx="500" cy="260" r="1.5"/><circle cx="550" cy="260" r="1.5"/><circle cx="600" cy="260" r="1.5"/><circle cx="650" cy="260" r="1.5"/><circle cx="700" cy="260" r="1.5"/><circle cx="750" cy="260" r="1.5"/>
-    <circle cx="50"  cy="290" r="1.5"/><circle cx="100" cy="290" r="1.5"/><circle cx="150" cy="290" r="1.5"/><circle cx="200" cy="290" r="1.5"/><circle cx="250" cy="290" r="1.5"/><circle cx="300" cy="290" r="1.5"/><circle cx="350" cy="290" r="1.5"/><circle cx="400" cy="290" r="1.5"/><circle cx="450" cy="290" r="1.5"/><circle cx="500" cy="290" r="1.5"/><circle cx="550" cy="290" r="1.5"/><circle cx="600" cy="290" r="1.5"/><circle cx="650" cy="290" r="1.5"/><circle cx="700" cy="290" r="1.5"/><circle cx="750" cy="290" r="1.5"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200">
+  <g transform="translate(20, 10) scale(1.4)">
+  <!-- Tail -->
+  <polygon points="64,96 54,112 74,112" fill="#E8453C"/>
+  <polygon points="64,108 58,118 70,118" fill="#D63C34"/>
+  <!-- Body -->
+  <ellipse cx="64" cy="72" rx="28" ry="24" fill="#E8453C"/>
+  <ellipse cx="64" cy="78" rx="18" ry="14" fill="#F4A39C"/>
+  <!-- Claw arms -->
+  <rect x="36" y="48" width="10" height="18" rx="4" fill="#E8453C" transform="rotate(-20 41 57)"/>
+  <rect x="82" y="48" width="10" height="18" rx="4" fill="#E8453C" transform="rotate(20 87 57)"/>
+  <!-- Left claw -->
+  <circle cx="30" cy="45" r="14" fill="#E8453C"/>
+  <circle cx="30" cy="45" r="9" fill="#F4A39C"/>
+  <!-- Right claw -->
+  <circle cx="98" cy="45" r="14" fill="#E8453C"/>
+  <circle cx="98" cy="45" r="9" fill="#F4A39C"/>
+  <!-- Eyes -->
+  <circle cx="54" cy="60" r="7" fill="white"/>
+  <circle cx="74" cy="60" r="7" fill="white"/>
+  <circle cx="56" cy="60" r="3" fill="#222"/>
+  <circle cx="76" cy="60" r="3" fill="#222"/>
+  <circle cx="54" cy="58" r="1.5" fill="white" opacity="0.8"/>
+  <circle cx="74" cy="58" r="1.5" fill="white" opacity="0.8"/>
+  <!-- Antennae -->
+  <path d="M58,52 Q52,30 42,22" stroke="#E8453C" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M70,52 Q76,30 86,22" stroke="#E8453C" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <circle cx="42" cy="22" r="2.5" fill="#F4A39C"/>
+  <circle cx="86" cy="22" r="2.5" fill="#F4A39C"/>
+  <!-- Smile -->
+  <path d="M58,70 Q64,76 70,70" stroke="#C0392B" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- Cheeks -->
+  <ellipse cx="48" cy="70" rx="4" ry="2.5" fill="#F4A39C" opacity="0.6"/>
+  <ellipse cx="80" cy="70" rx="4" ry="2.5" fill="#F4A39C" opacity="0.6"/>
+  <!-- Gold glasses -->
+  <circle cx="54" cy="60" r="9" fill="none" stroke="#D97706" stroke-width="1.8"/>
+  <circle cx="74" cy="60" r="9" fill="none" stroke="#D97706" stroke-width="1.8"/>
+  <path d="M63 60 C66 57, 72 57, 75 60" stroke="#D97706" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <!-- Couch in right claw -->
+  <g transform="translate(100,32) rotate(10)">
+    <rect x="-8" y="-10" width="16" height="22" rx="2" fill="#27AE60"/>
+    <rect x="-4" y="-12" width="8" height="4" rx="2" fill="#1E8449"/>
+    <line x1="-5" y1="-4" x2="5" y2="-4" stroke="white" stroke-width="1"/>
+    <line x1="-5" y1="-1" x2="5" y2="-1" stroke="white" stroke-width="1"/>
+    <line x1="-5" y1="2" x2="3" y2="2" stroke="white" stroke-width="1"/>
+    <line x1="-5" y1="5" x2="5" y2="5" stroke="white" stroke-width="1"/>
+    <line x1="-5" y1="8" x2="2" y2="8" stroke="white" stroke-width="1"/>
   </g>
-
-  <!-- ═══════════════════════════════════════════════════════ -->
-  <!-- FLOOR                                                    -->
-  <!-- ═══════════════════════════════════════════════════════ -->
-
-  <rect x="0" y="248" width="800" height="52" fill="#142030" rx="0"/>
-  <!-- Floor sheen line -->
-  <line x1="0" y1="248" x2="800" y2="248" stroke="#0D9488" stroke-width="1" opacity="0.3"/>
-
-  <!-- ═══════════════════════════════════════════════════════ -->
-  <!-- THERAPIST'S COUCH                                       -->
-  <!-- ═══════════════════════════════════════════════════════ -->
-
-  <!-- Couch shadow on floor -->
-  <ellipse cx="400" cy="253" rx="230" ry="10" fill="#000" opacity="0.25"/>
-
-  <!-- Couch back legs -->
-  <rect x="208" y="243" width="16" height="22" rx="4" fill="#B45309"/>
-  <rect x="576" y="243" width="16" height="22" rx="4" fill="#B45309"/>
-
-  <!-- Couch front legs -->
-  <rect x="182" y="243" width="18" height="28" rx="5" fill="#92400E"/>
-  <rect x="600" y="243" width="18" height="28" rx="5" fill="#92400E"/>
-
-  <!-- Couch main body -->
-  <rect x="170" y="200" width="460" height="52" rx="12" fill="url(#couchGrad)" filter="url(#shadow)"/>
-
-  <!-- Couch back cushion -->
-  <rect x="174" y="152" width="452" height="56" rx="14" fill="url(#cushionGrad)"/>
-
-  <!-- Cushion button detail -->
-  <circle cx="400" cy="180" r="5" fill="#D97706" opacity="0.5"/>
-  <circle cx="280" cy="180" r="4" fill="#D97706" opacity="0.4"/>
-  <circle cx="520" cy="180" r="4" fill="#D97706" opacity="0.4"/>
-
-  <!-- Couch armrests -->
-  <rect x="170" y="162" width="28" height="90" rx="10" fill="url(#couchGrad)"/>
-  <rect x="602" y="162" width="28" height="90" rx="10" fill="url(#couchGrad)"/>
-
-  <!-- Armrest highlight -->
-  <rect x="173" y="165" width="10" height="40" rx="5" fill="#FFF" opacity="0.3"/>
-  <rect x="605" y="165" width="10" height="40" rx="5" fill="#FFF" opacity="0.3"/>
-
-  <!-- Couch piping / seam -->
-  <rect x="174" y="200" width="452" height="5" rx="2" fill="#D97706" opacity="0.25"/>
-
-  <!-- ═══════════════════════════════════════════════════════ -->
-  <!-- CRAB — HERR FREUD                                       -->
-  <!-- ═══════════════════════════════════════════════════════ -->
-
-  <!-- Crab shadow -->
-  <ellipse cx="400" cy="196" rx="56" ry="10" fill="#000" opacity="0.22"/>
-
-  <!-- ── CLAW ARMS ── -->
-
-  <!-- Left claw arm -->
-  <path d="M 340 172 C 328 165, 308 158, 286 152" stroke="#C2410C" stroke-width="10" stroke-linecap="round" fill="none"/>
-  <!-- Left claw arm highlight -->
-  <path d="M 340 168 C 330 162, 312 156, 292 151" stroke="#FB923C" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.5"/>
-
-  <!-- Left claw pincer upper -->
-  <path d="M 288 150 C 268 138, 244 138, 232 150 C 225 158, 234 166, 244 164 C 256 162, 268 162, 278 158" fill="#F97316" stroke="#C2410C" stroke-width="1.5"/>
-  <!-- Left claw pincer lower -->
-  <path d="M 288 154 C 270 154, 250 160, 238 172 C 232 180, 242 186, 252 182 C 264 178, 276 172, 284 165" fill="#FB923C" stroke="#C2410C" stroke-width="1.5"/>
-
-  <!-- Right claw arm -->
-  <path d="M 460 172 C 472 165, 492 158, 514 152" stroke="#C2410C" stroke-width="10" stroke-linecap="round" fill="none"/>
-  <!-- Right claw arm highlight -->
-  <path d="M 460 168 C 470 162, 488 156, 508 151" stroke="#FB923C" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.5"/>
-
-  <!-- Right claw pincer upper -->
-  <path d="M 512 150 C 532 138, 556 138, 568 150 C 575 158, 566 166, 556 164 C 544 162, 532 162, 522 158" fill="#F97316" stroke="#C2410C" stroke-width="1.5"/>
-  <!-- Right claw pincer lower -->
-  <path d="M 512 154 C 530 154, 550 160, 562 172 C 568 180, 558 186, 548 182 C 536 178, 524 172, 516 165" fill="#FB923C" stroke="#C2410C" stroke-width="1.5"/>
-
-  <!-- ── LEGS (drawn first, behind shell) ── -->
-
-  <!-- Far-left leg -->
-  <path d="M 362 186 C 346 200, 338 220, 332 232" stroke="#F97316" stroke-width="5" stroke-linecap="round" fill="none"/>
-  <path d="M 332 232 C 326 238, 318 240, 312 236" stroke="#F97316" stroke-width="5" stroke-linecap="round" fill="none"/>
-
-  <!-- Mid-left leg -->
-  <path d="M 376 190 C 364 208, 358 226, 354 238" stroke="#FB923C" stroke-width="5" stroke-linecap="round" fill="none"/>
-  <path d="M 354 238 C 348 246, 340 247, 334 243" stroke="#FB923C" stroke-width="5" stroke-linecap="round" fill="none"/>
-
-  <!-- Mid-right leg -->
-  <path d="M 424 190 C 436 208, 442 226, 446 238" stroke="#FB923C" stroke-width="5" stroke-linecap="round" fill="none"/>
-  <path d="M 446 238 C 452 246, 460 247, 466 243" stroke="#FB923C" stroke-width="5" stroke-linecap="round" fill="none"/>
-
-  <!-- Far-right leg -->
-  <path d="M 438 186 C 454 200, 462 220, 468 232" stroke="#F97316" stroke-width="5" stroke-linecap="round" fill="none"/>
-  <path d="M 468 232 C 474 238, 482 240, 488 236" stroke="#F97316" stroke-width="5" stroke-linecap="round" fill="none"/>
-
-  <!-- ── SHELL (main body) ── -->
-  <ellipse cx="400" cy="160" rx="62" ry="50" fill="url(#shellGrad)" filter="url(#crabGlow)"/>
-
-  <!-- Shell segment lines -->
-  <path d="M 400 114 C 400 114, 385 130, 385 158 C 385 172, 390 180, 400 183" stroke="#C2410C" stroke-width="1.5" fill="none" opacity="0.5"/>
-  <path d="M 400 114 C 400 114, 415 130, 415 158 C 415 172, 410 180, 400 183" stroke="#C2410C" stroke-width="1.5" fill="none" opacity="0.5"/>
-  <path d="M 400 114 C 400 114, 380 136, 376 158" stroke="#C2410C" stroke-width="1" fill="none" opacity="0.3"/>
-  <path d="M 400 114 C 400 114, 420 136, 424 158" stroke="#C2410C" stroke-width="1" fill="none" opacity="0.3"/>
-
-  <!-- Shell highlight -->
-  <ellipse cx="386" cy="142" rx="22" ry="14" fill="#FFF" opacity="0.12" transform="rotate(-20, 386, 142)"/>
-
-  <!-- ── BELLY / UNDERSIDE ── -->
-  <ellipse cx="400" cy="184" rx="36" ry="16" fill="url(#bellyGrad)"/>
-  <ellipse cx="400" cy="182" rx="28" ry="10" fill="#FFF" opacity="0.08"/>
-
-  <!-- ── JACKET / SUIT BODY ── -->
-
-  <!-- Jacket main body -->
-  <path d="M 360 172 C 362 165, 370 155, 386 150 L 414 150 C 430 155, 438 165, 440 172 L 438 190 C 430 186, 420 183, 400 183 C 380 183, 370 186, 362 190 Z" fill="url(#jacketGrad)"/>
-
-  <!-- Jacket lapels -->
-  <path d="M 386 150 C 383 158, 378 168, 374 180 L 386 183 C 392 174, 395 162, 394 152 Z" fill="#1E293B" stroke="#334155" stroke-width="1"/>
-  <path d="M 414 150 C 417 158, 422 168, 426 180 L 414 183 C 408 174, 405 162, 406 152 Z" fill="#1E293B" stroke="#334155" stroke-width="1"/>
-
-  <!-- White shirt / tie area -->
-  <path d="M 394 152 L 400 183 L 406 152 L 404 152 L 400 174 L 396 152 Z" fill="#F8FAFC"/>
-
-  <!-- Necktie -->
-  <path d="M 398 160 L 402 160 L 404 170 L 401 196 L 400 200 L 399 196 L 396 170 Z" fill="#B45309"/>
-  <!-- Tie knot -->
-  <path d="M 397 160 L 403 160 L 402 167 L 400 169 L 398 167 Z" fill="#92400E"/>
-  <!-- Tie highlight -->
-  <path d="M 399 161 L 400 161 L 400 170 L 399 170 Z" fill="#D97706" opacity="0.4"/>
-
-  <!-- Jacket buttons -->
-  <circle cx="400" cy="186" r="2" fill="#475569"/>
-  <circle cx="400" cy="193" r="2" fill="#475569"/>
-
-  <!-- ── EYE STALKS ── -->
-
-  <!-- Left stalk -->
-  <path d="M 376 136 C 370 128, 364 118, 362 108" stroke="#FB923C" stroke-width="8" stroke-linecap="round" fill="none"/>
-  <circle cx="362" cy="103" r="12" fill="#FB923C"/>
-  <circle cx="362" cy="103" r="9" fill="#FFFEF0"/>
-
-  <!-- Right stalk -->
-  <path d="M 424 136 C 430 128, 436 118, 438 108" stroke="#FB923C" stroke-width="8" stroke-linecap="round" fill="none"/>
-  <circle cx="438" cy="103" r="12" fill="#FB923C"/>
-  <circle cx="438" cy="103" r="9" fill="#FFFEF0"/>
-
-  <!-- ── GLASSES ── -->
-
-  <!-- Left lens -->
-  <circle cx="362" cy="103" r="13" fill="none" stroke="url(#goldGrad)" stroke-width="3"/>
-  <!-- Left lens tint (subtle) -->
-  <circle cx="362" cy="103" r="11" fill="#0D9488" opacity="0.12"/>
-
-  <!-- Right lens -->
-  <circle cx="438" cy="103" r="13" fill="none" stroke="url(#goldGrad)" stroke-width="3"/>
-  <!-- Right lens tint -->
-  <circle cx="438" cy="103" r="11" fill="#0D9488" opacity="0.12"/>
-
-  <!-- Bridge -->
-  <path d="M 375 103 C 386 98, 414 98, 425 103" stroke="url(#goldGrad)" stroke-width="3" fill="none" stroke-linecap="round"/>
-
-  <!-- Temple arms -->
-  <path d="M 349 103 C 340 104, 332 107, 325 112" stroke="url(#goldGrad)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-  <path d="M 451 103 C 460 104, 468 107, 475 112" stroke="url(#goldGrad)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-
-  <!-- Pupils (looking slightly up, contemplative) -->
-  <circle cx="362" cy="100" r="4.5" fill="#1E293B"/>
-  <circle cx="438" cy="100" r="4.5" fill="#1E293B"/>
-
-  <!-- Eye shine -->
-  <circle cx="364" cy="98" r="1.8" fill="#FFF" opacity="0.85"/>
-  <circle cx="440" cy="98" r="1.8" fill="#FFF" opacity="0.85"/>
-
-  <!-- ── ANTENNAE ── -->
-
-  <!-- Left antenna -->
-  <path d="M 362 91 C 356 78, 348 66, 338 58" stroke="#FB923C" stroke-width="3" stroke-linecap="round" fill="none"/>
-  <path d="M 338 58 C 332 54, 330 58, 335 62 C 340 66, 343 63, 340 58" fill="#FB923C"/>
-
-  <!-- Right antenna -->
-  <path d="M 438 91 C 444 78, 452 66, 462 58" stroke="#FB923C" stroke-width="3" stroke-linecap="round" fill="none"/>
-  <path d="M 462 58 C 468 54, 470 58, 465 62 C 460 66, 457 63, 460 58" fill="#FB923C"/>
-
-  <!-- ═══════════════════════════════════════════════════════ -->
-  <!-- SPEECH / THOUGHT BUBBLE                                  -->
-  <!-- ═══════════════════════════════════════════════════════ -->
-
-  <!-- Bubble trail dots -->
-  <circle cx="490" cy="75" r="4"   fill="#0D9488" opacity="0.5"/>
-  <circle cx="504" cy="62" r="6"   fill="#0D9488" opacity="0.65"/>
-  <circle cx="522" cy="50" r="8.5" fill="#0D9488" opacity="0.8"/>
-
-  <!-- Speech bubble -->
-  <path d="M 528 20 C 570 14, 658 14, 698 34 C 718 46, 724 64, 720 80 C 724 96, 716 112, 700 120 L 678 136 L 658 118 C 640 122, 614 124, 590 122 C 566 124, 546 118, 532 110 C 518 100, 510 84, 512 68 C 510 50, 518 32, 528 20 Z" fill="#F8FAFC" stroke="#0D9488" stroke-width="2.5" filter="url(#shadow)"/>
-
-  <!-- Thought / dialogue ellipsis -->
-  <circle cx="572" cy="60"  r="6" fill="#0D9488" opacity="0.9"/>
-  <circle cx="592" cy="72"  r="6" fill="#0D9488" opacity="0.7"/>
-  <circle cx="614" cy="82"  r="6" fill="#0D9488" opacity="0.5"/>
-
-  <!-- Decorative quote mark -->
-  <text x="536" y="52" font-family="Georgia, serif" font-size="22" fill="#0D9488" opacity="0.3" font-weight="bold">"</text>
-
-  <!-- ═══════════════════════════════════════════════════════ -->
-  <!-- LEFT SIDE — DECORATIVE ELEMENTS                         -->
-  <!-- ═══════════════════════════════════════════════════════ -->
-
-  <!-- Teal decorative accent — left -->
-  <path d="M 18 260 C 18 250, 24 242, 34 242 C 44 242, 50 250, 50 260" stroke="#0D9488" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.5"/>
-
-  <!-- Small coral star — left -->
-  <path d="M 72 68 L 74 74 L 80 74 L 75 78 L 77 84 L 72 80 L 67 84 L 69 78 L 64 74 L 70 74 Z" fill="#F97316" opacity="0.35"/>
-
-  <!-- Teal star — left -->
-  <path d="M 38 32 L 40 38 L 46 38 L 41 42 L 43 48 L 38 44 L 33 48 L 35 42 L 30 38 L 36 38 Z" fill="#0D9488" opacity="0.35"/>
-
-  <!-- ═══════════════════════════════════════════════════════ -->
-  <!-- RIGHT SIDE — DECORATIVE ELEMENTS                        -->
-  <!-- ═══════════════════════════════════════════════════════ -->
-
-  <!-- Teal decorative accent — right -->
-  <path d="M 750 260 C 750 250, 756 242, 766 242 C 776 242, 782 250, 782 260" stroke="#0D9488" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.5"/>
-
-  <!-- Small coral star — right -->
-  <path d="M 728 68 L 730 74 L 736 74 L 731 78 L 733 84 L 728 80 L 723 84 L 725 78 L 720 74 L 726 74 Z" fill="#F97316" opacity="0.35"/>
-
-  <!-- ═══════════════════════════════════════════════════════ -->
-  <!-- TYPOGRAPHY                                               -->
-  <!-- ═══════════════════════════════════════════════════════ -->
-
-  <!-- Herr Freud — main title -->
-  <text x="400" y="287"
-        text-anchor="middle"
-        font-family="'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif"
-        font-size="28"
-        font-weight="bold"
-        fill="#FEF3C7"
-        letter-spacing="3">Herr Freud</text>
-
-  <!-- Subtitle with couch emoji -->
-  <text x="400" y="303"
-        text-anchor="middle"
-        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-        font-size="12"
-        fill="#0D9488"
-        letter-spacing="2"
-        opacity="0.95">THERAPEUTIC LISTENER</text>
-
+  </g>
+  <text x="230" y="75" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="22" fill="#888" font-weight="400" letter-spacing="2">OPENCLAW</text>
+  <text x="230" y="135" font-family="'Palatino Linotype', Palatino, Georgia, serif" font-size="52" fill="#2C3E50" font-weight="700">Herr Freud</text>
+  <text x="230" y="165" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="18" fill="#999" font-weight="300">Therapeutic Listener</text>
 </svg>

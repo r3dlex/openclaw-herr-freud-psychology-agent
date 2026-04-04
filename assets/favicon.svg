@@ -1,20 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Herr Freud Favicon">
-  <title>Herr Freud</title>
-  <rect width="32" height="32" rx="6" fill="#0D2235"/>
-  <!-- Crab body -->
-  <ellipse cx="16" cy="17" rx="8" ry="7" fill="#F97316"/>
-  <ellipse cx="16" cy="19" rx="5" ry="2.5" fill="#FB923C"/>
-  <!-- Jacket -->
-  <path d="M 12 19 C 12.5 17, 14 15, 16 14.5 L 16 14.5 C 18 15, 19.5 17, 20 19 L 19.5 21 C 18.5 20.5, 17 20, 16 20 C 15 20, 13.5 20.5, 12.5 21 Z" fill="#1E293B"/>
-  <!-- Eye stalks -->
-  <path d="M 13 13 C 12 11, 11 9, 11 8" stroke="#FB923C" stroke-width="2" stroke-linecap="round" fill="none"/>
-  <circle cx="11" cy="7" r="2.5" fill="#FB923C"/>
-  <circle cx="11" cy="7" r="1.8" fill="#FFFEF0"/>
-  <path d="M 19 13 C 20 11, 21 9, 21 8" stroke="#FB923C" stroke-width="2" stroke-linecap="round" fill="none"/>
-  <circle cx="21" cy="7" r="2.5" fill="#FB923C"/>
-  <circle cx="21" cy="7" r="1.8" fill="#FFFEF0"/>
-  <!-- Glasses -->
-  <circle cx="11" cy="7" r="3" fill="none" stroke="#FCD34D" stroke-width="1"/>
-  <circle cx="21" cy="7" r="3" fill="none" stroke="#FCD34D" stroke-width="1"/>
-  <path d="M 14 7 C 15 5.5, 17 5.5, 18 7" stroke="#FCD34D" stroke-width="1" fill="none"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- Favicon: lobster head + claws with gold glasses -->
+  <ellipse cx="64" cy="72" rx="28" ry="24" fill="#E8453C"/>
+  <ellipse cx="64" cy="78" rx="18" ry="14" fill="#F4A39C"/>
+  <rect x="36" y="48" width="10" height="18" rx="4" fill="#E8453C" transform="rotate(-20 41 57)"/>
+  <rect x="82" y="48" width="10" height="18" rx="4" fill="#E8453C" transform="rotate(20 87 57)"/>
+  <circle cx="30" cy="45" r="14" fill="#E8453C"/>
+  <circle cx="30" cy="45" r="9" fill="#F4A39C"/>
+  <circle cx="98" cy="45" r="14" fill="#E8453C"/>
+  <circle cx="98" cy="45" r="9" fill="#F4A39C"/>
+  <circle cx="54" cy="60" r="7" fill="white"/>
+  <circle cx="74" cy="60" r="7" fill="white"/>
+  <circle cx="56" cy="60" r="3" fill="#222"/>
+  <circle cx="76" cy="60" r="3" fill="#222"/>
+  <circle cx="54" cy="58" r="1.5" fill="white" opacity="0.8"/>
+  <circle cx="74" cy="58" r="1.5" fill="white" opacity="0.8"/>
+  <path d="M58,52 Q52,30 42,22" stroke="#E8453C" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M70,52 Q76,30 86,22" stroke="#E8453C" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <circle cx="42" cy="22" r="2.5" fill="#F4A39C"/>
+  <circle cx="86" cy="22" r="2.5" fill="#F4A39C"/>
+  <path d="M58,70 Q64,76 70,70" stroke="#C0392B" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <ellipse cx="48" cy="70" rx="4" ry="2.5" fill="#F4A39C" opacity="0.6"/>
+  <ellipse cx="80" cy="70" rx="4" ry="2.5" fill="#F4A39C" opacity="0.6"/>
+  <!-- Gold glasses -->
+  <circle cx="54" cy="60" r="9" fill="none" stroke="#D97706" stroke-width="1.8"/>
+  <circle cx="74" cy="60" r="9" fill="none" stroke="#D97706" stroke-width="1.8"/>
+  <path d="M63 60 C66 57, 72 57, 75 60" stroke="#D97706" stroke-width="1.8" fill="none" stroke-linecap="round"/>
 </svg>

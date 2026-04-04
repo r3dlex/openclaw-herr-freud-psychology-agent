@@ -1,99 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Herr Freud Logo">
-  <title>Herr Freud</title>
-  <desc>Wise crab therapist wearing glasses and a suit, the logo for Herr Freud therapeutic AI</desc>
-
-  <defs>
-    <clipPath id="circleClip">
-      <circle cx="64" cy="64" r="64"/>
-    </clipPath>
-    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1" gradientUnits="objectBoundingBox">
-      <stop offset="0%" stop-color="#0D2235"/>
-      <stop offset="100%" stop-color="#1E293B"/>
-    </linearGradient>
-    <linearGradient id="shellGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#F97316"/>
-      <stop offset="100%" stop-color="#C2410C"/>
-    </linearGradient>
-    <linearGradient id="bellyGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#FB923C"/>
-      <stop offset="100%" stop-color="#EA580C"/>
-    </linearGradient>
-    <linearGradient id="jacketGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1E293B"/>
-      <stop offset="100%" stop-color="#0F172A"/>
-    </linearGradient>
-    <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#FCD34D"/>
-      <stop offset="50%" stop-color="#D97706"/>
-      <stop offset="100%" stop-color="#B45309"/>
-    </linearGradient>
-    <radialGradient id="tealGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#0D9488" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#0D9488" stop-opacity="0"/>
-    </radialGradient>
-  </defs>
-
-  <!-- Circle background -->
-  <circle cx="64" cy="64" r="64" fill="url(#bgGrad)"/>
-
-  <!-- Teal ambient glow -->
-  <circle cx="64" cy="70" r="50" fill="url(#tealGlow)"/>
-
-  <!-- ── CLAW ARMS ── -->
-  <path d="M 44 62 C 36 57, 24 52, 14 48" stroke="#C2410C" stroke-width="6" stroke-linecap="round" fill="none"/>
-  <path d="M 15 47 C 7 42, 2 44, 6 50 C 10 56, 14 54, 14 48" fill="#F97316" stroke="#C2410C" stroke-width="1"/>
-  <path d="M 15 50 C 7 52, 2 54, 6 60 C 10 66, 16 62, 14 55" fill="#FB923C" stroke="#C2410C" stroke-width="1"/>
-
-  <path d="M 84 62 C 92 57, 104 52, 114 48" stroke="#C2410C" stroke-width="6" stroke-linecap="round" fill="none"/>
-  <path d="M 113 47 C 121 42, 126 44, 122 50 C 118 56, 114 54, 114 48" fill="#F97316" stroke="#C2410C" stroke-width="1"/>
-  <path d="M 113 50 C 121 52, 126 54, 122 60 C 118 66, 112 62, 114 55" fill="#FB923C" stroke="#C2410C" stroke-width="1"/>
-
-  <!-- ── LEGS ── -->
-  <path d="M 44 76 C 36 86, 32 96, 30 104" stroke="#F97316" stroke-width="4" stroke-linecap="round" fill="none"/>
-  <path d="M 30 104 C 26 108, 20 108, 18 104" stroke="#F97316" stroke-width="4" stroke-linecap="round" fill="none"/>
-
-  <path d="M 50 78 C 44 90, 40 100, 38 108" stroke="#FB923C" stroke-width="4" stroke-linecap="round" fill="none"/>
-  <path d="M 38 108 C 34 114, 28 113, 26 108" stroke="#FB923C" stroke-width="4" stroke-linecap="round" fill="none"/>
-
-  <path d="M 78 78 C 84 90, 88 100, 90 108" stroke="#FB923C" stroke-width="4" stroke-linecap="round" fill="none"/>
-  <path d="M 90 108 C 94 114, 100 113, 102 108" stroke="#FB923C" stroke-width="4" stroke-linecap="round" fill="none"/>
-
-  <path d="M 84 76 C 92 86, 96 96, 98 104" stroke="#F97316" stroke-width="4" stroke-linecap="round" fill="none"/>
-  <path d="M 98 104 C 102 108, 108 108, 110 104" stroke="#F97316" stroke-width="4" stroke-linecap="round" fill="none"/>
-
-  <!-- ── SHELL ── -->
-  <ellipse cx="64" cy="64" rx="26" ry="22" fill="url(#shellGrad)"/>
-  <ellipse cx="58" cy="58" rx="9" ry="6" fill="#FFF" opacity="0.1" transform="rotate(-20, 58, 58)"/>
-
-  <!-- ── BELLY ── -->
-  <ellipse cx="64" cy="74" rx="15" ry="7" fill="url(#bellyGrad)"/>
-
-  <!-- ── JACKET ── -->
-  <path d="M 50 68 C 51 64, 55 60, 62 58 L 66 58 C 73 60, 77 64, 78 68 L 77 74 C 73 72, 68 71, 64 71 C 60 71, 55 72, 51 74 Z" fill="url(#jacketGrad)"/>
-  <path d="M 62 58 L 64 71 L 66 58 L 65 58 L 64 66 L 63 58 Z" fill="#F8FAFC"/>
-  <path d="M 62.5 62 L 63.5 62 L 63.5 70 L 62.5 70 Z" fill="#B45309"/>
-
-  <!-- ── EYE STALKS ── -->
-  <path d="M 54 52 C 51 46, 48 40, 47 35" stroke="#FB923C" stroke-width="5" stroke-linecap="round" fill="none"/>
-  <circle cx="47" cy="31" r="7" fill="#FB923C"/>
-  <circle cx="47" cy="31" r="5.5" fill="#FFFEF0"/>
-  <circle cx="47" cy="29.5" r="2.5" fill="#1E293B"/>
-  <circle cx="48" cy="28.5" r="1" fill="#FFF" opacity="0.85"/>
-
-  <path d="M 74 52 C 77 46, 80 40, 81 35" stroke="#FB923C" stroke-width="5" stroke-linecap="round" fill="none"/>
-  <circle cx="81" cy="31" r="7" fill="#FB923C"/>
-  <circle cx="81" cy="31" r="5.5" fill="#FFFEF0"/>
-  <circle cx="81" cy="29.5" r="2.5" fill="#1E293B"/>
-  <circle cx="82" cy="28.5" r="1" fill="#FFF" opacity="0.85"/>
-
-  <!-- ── GLASSES ── -->
-  <circle cx="47" cy="31" r="8" fill="none" stroke="url(#goldGrad)" stroke-width="2"/>
-  <circle cx="81" cy="31" r="8" fill="none" stroke="url(#goldGrad)" stroke-width="2"/>
-  <path d="M 55 31 C 60 28, 68 28, 73 31" stroke="url(#goldGrad)" stroke-width="2" fill="none" stroke-linecap="round"/>
-
-  <!-- ── ANTENNAE ── -->
-  <path d="M 47 24 C 44 18, 40 14, 36 11" stroke="#FB923C" stroke-width="2" stroke-linecap="round" fill="none"/>
-  <path d="M 36 11 C 33 8, 32 11, 35 13 C 38 15, 37 13, 36 11" fill="#FB923C"/>
-  <path d="M 81 24 C 84 18, 88 14, 92 11" stroke="#FB923C" stroke-width="2" stroke-linecap="round" fill="none"/>
-  <path d="M 92 11 C 95 8, 96 11, 93 13 C 90 15, 91 13, 92 11" fill="#FB923C"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- Tail -->
+  <polygon points="64,96 54,112 74,112" fill="#E8453C"/>
+  <polygon points="64,108 58,118 70,118" fill="#D63C34"/>
+  <!-- Body -->
+  <ellipse cx="64" cy="72" rx="28" ry="24" fill="#E8453C"/>
+  <ellipse cx="64" cy="78" rx="18" ry="14" fill="#F4A39C"/>
+  <!-- Claw arms -->
+  <rect x="36" y="48" width="10" height="18" rx="4" fill="#E8453C" transform="rotate(-20 41 57)"/>
+  <rect x="82" y="48" width="10" height="18" rx="4" fill="#E8453C" transform="rotate(20 87 57)"/>
+  <!-- Left claw -->
+  <circle cx="30" cy="45" r="14" fill="#E8453C"/>
+  <circle cx="30" cy="45" r="9" fill="#F4A39C"/>
+  <!-- Right claw -->
+  <circle cx="98" cy="45" r="14" fill="#E8453C"/>
+  <circle cx="98" cy="45" r="9" fill="#F4A39C"/>
+  <!-- Eyes -->
+  <circle cx="54" cy="60" r="7" fill="white"/>
+  <circle cx="74" cy="60" r="7" fill="white"/>
+  <circle cx="56" cy="60" r="3" fill="#222"/>
+  <circle cx="76" cy="60" r="3" fill="#222"/>
+  <circle cx="54" cy="58" r="1.5" fill="white" opacity="0.8"/>
+  <circle cx="74" cy="58" r="1.5" fill="white" opacity="0.8"/>
+  <!-- Antennae -->
+  <path d="M58,52 Q52,30 42,22" stroke="#E8453C" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M70,52 Q76,30 86,22" stroke="#E8453C" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <circle cx="42" cy="22" r="2.5" fill="#F4A39C"/>
+  <circle cx="86" cy="22" r="2.5" fill="#F4A39C"/>
+  <!-- Smile -->
+  <path d="M58,70 Q64,76 70,70" stroke="#C0392B" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- Cheeks -->
+  <ellipse cx="48" cy="70" rx="4" ry="2.5" fill="#F4A39C" opacity="0.6"/>
+  <ellipse cx="80" cy="70" rx="4" ry="2.5" fill="#F4A39C" opacity="0.6"/>
+  <!-- Suit jacket body -->
+  <path d="M50 68 C51 64, 55 60, 62 58 L66 58 C73 60, 77 64, 78 68 L77 74 C73 72, 68 71, 64 71 C60 71, 55 72, 51 74 Z" fill="#1E293B"/>
+  <!-- White shirt & tie -->
+  <path d="M62 58 L64 71 L66 58 L65 58 L64 66 L63 58 Z" fill="#F8FAFC"/>
+  <path d="M62.5 62 L63.5 62 L63.5 70 L62.5 70 Z" fill="#B45309"/>
+  <!-- Gold glasses -->
+  <circle cx="54" cy="60" r="9" fill="none" stroke="#D97706" stroke-width="1.8"/>
+  <circle cx="74" cy="60" r="9" fill="none" stroke="#D97706" stroke-width="1.8"/>
+  <path d="M63 60 C66 57, 72 57, 75 60" stroke="#D97706" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <!-- Couch in right claw -->
+  <g transform="translate(100,32) rotate(10)">
+    <rect x="-8" y="-10" width="16" height="22" rx="2" fill="#27AE60"/>
+    <rect x="-4" y="-12" width="8" height="4" rx="2" fill="#1E8449"/>
+    <line x1="-5" y1="-4" x2="5" y2="-4" stroke="white" stroke-width="1"/>
+    <line x1="-5" y1="-1" x2="5" y2="-1" stroke="white" stroke-width="1"/>
+    <line x1="-5" y1="2" x2="3" y2="2" stroke="white" stroke-width="1"/>
+    <line x1="-5" y1="5" x2="5" y2="5" stroke="white" stroke-width="1"/>
+    <line x1="-5" y1="8" x2="2" y2="8" stroke="white" stroke-width="1"/>
+  </g>
 </svg>
